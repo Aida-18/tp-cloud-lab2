@@ -2,11 +2,11 @@ from flask import Flask
   import os
 
   app = Flask(__name__)
-
+  
   @app.route('/')
   def index():
       message = os.environ.get('APP_MESSAGE', 'No message set')
-      return f'Service Models Lab 2\nAPP_MESSAGE: {message}\n'
+      return 'Service Models Lab 2\nAPP_MESSAGE: ' + message + '\n'
 
   @app.route('/health')
   def health():
